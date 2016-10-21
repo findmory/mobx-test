@@ -3,7 +3,7 @@ This is a project created with
 so I can use MobX decorators
 
 after initilizing it I edited the .env file to include
-```json
+```text
 REACT_APP_DECORATORS=true
 ```
 
@@ -20,7 +20,7 @@ _TestSubComponent_ gets the 'names' prop passed down from the UserStore.
 This is done in the parent component by wrapping it with Provider:
 
 ##### PARENT
-```javascript
+```jsx
 import { Provider } from 'mobx-react';
 import userStore from './stores/UserStore';
 <Provider {...userStore}>
@@ -29,7 +29,7 @@ import userStore from './stores/UserStore';
 ```
 
 ##### CHILD
-```javascript
+```jsx
 import { inject } from 'mobx-react';
 @inject('names')
 ```
